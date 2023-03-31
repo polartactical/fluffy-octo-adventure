@@ -1,0 +1,7 @@
+CREATE DATABASE temperature;
+CREATE TABLE temp_fl (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_name VARCHAR(50),
+  temp DECIMAL(5,2),
+  input_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
