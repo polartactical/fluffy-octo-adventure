@@ -1,7 +1,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
-#include <WiFiManager.h>
+#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 
 // Data wire is connected to D5
 #define ONE_WIRE_BUS D5
