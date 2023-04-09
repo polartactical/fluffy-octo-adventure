@@ -12,3 +12,7 @@ Server Side:
 Put server.py and watchdog.py into your /usr/sbin/ folder and make executeable (chmod +x)
 Install mysql (mariadb), python and grafana (with all needed dependancies)
 edit server.py to your server settings.
+
+09/04/2023
+Adding WifiManager to code for easy connection to Wifi instead of hard coding SSID in code.
+https://github.com/tzapu/WiFiManager
