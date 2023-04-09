@@ -1,19 +1,19 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
-
+#include <WiFiManager.h>
 
 // Data wire is connected to D5
 #define ONE_WIRE_BUS D5
 
 
 // WiFi settings
-const char* ssid = "YourSSID";
-const char* password = "WifiPassword";
+const char* ssid = "";
+const char* password = "";
 const char* server = "VPSServerAddress";
 const int port = 8888;
 const String secret_key = "supersecret"; // match with key in server.py
-
+WiFiManger wifimanager;
 
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(ONE_WIRE_BUS);
@@ -25,6 +25,7 @@ DallasTemperature sensors(&oneWire);
 
 void setup() {
   Serial.begin(9600);
+  wifiManager.autoConnect();
   // Connect to WiFi network
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
